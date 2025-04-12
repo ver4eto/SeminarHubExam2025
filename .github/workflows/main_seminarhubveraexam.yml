@@ -22,10 +22,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Restore dependencies
-        run: dotnet restore ./SeminarHubExam2025.csproj
+        run: dotnet restore ./SeminarHub/SeminarHub.csproj
 
       - name: Build and publish
-        run: dotnet publish ./SeminarHubExam2025.csproj -c Release -o published
+        run: dotnet publish ./SeminarHub.csproj -c Release -o published
 
       - name: Zip published output
         run: zip -r publish.zip ./published
